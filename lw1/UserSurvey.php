@@ -1,7 +1,7 @@
 <?php
 
 header("Content-Type: text/plain");
-require('src/LoadClasses.php');
+require('src/common.inc.php');
 $survey = new RequestSurveyLoader;
 $fileData = $survey->data();
 $fileStorage = new SurveyFileStorage;

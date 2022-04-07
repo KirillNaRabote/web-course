@@ -2,10 +2,10 @@
 
 class Survey
 {
-    private $email;
-    private $firstName; 
-    private $lastName;
-    private $age; 
+    private string $email;
+    private string $firstName; 
+    private string $lastName;
+    private string $age; 
 
     public function __construct(string $email, string $firstName, string $lastName, string $age)
     {

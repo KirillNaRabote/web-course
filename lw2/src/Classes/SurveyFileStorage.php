@@ -8,7 +8,7 @@ class SurveyFileStorage
     {
         if ($fileData->getEmail())
         {
-            $fileName = realpath('public/data/') . $fileData->getEmail() . '.txt';
+            $fileName = 'data/' . $fileData->getEmail() . '.txt';
             if (file_exists($fileName))
             {
                 $content = file($fileName);

@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7fff975-cb51-4d66-88aa-64379e35345c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../task2" beforeDir="false" afterPath="$PROJECT_DIR$/../task2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Вопрос ко второй лабе.txt" beforeDir="false" />
-    </list>
+    <list default="true" id="b7fff975-cb51-4d66-88aa-64379e35345c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -154,16 +151,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "F:/study/web-course/task2",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/study/web-course/task2&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\study\web-course\lw2\src" />
@@ -184,6 +181,7 @@
       <workItem from="1650077562882" duration="72000" />
       <workItem from="1650094816315" duration="39000" />
       <workItem from="1650094864327" duration="189000" />
+      <workItem from="1650095346952" duration="218000" />
     </task>
     <servers />
   </component>

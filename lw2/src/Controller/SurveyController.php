@@ -2,31 +2,45 @@
 
 namespace App\Controller;
 
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Classes\SurveyPrinter;
 use App\Classes\RequestSurveyLoader;
 use App\Classes\SurveyFileStorage;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Annotation\Route;
 
 class SurveyController extends AbstractController
 {
-    /**
-     * @Route("/ladno", name="ladno")
-     */
-    public function bebra(): Response
+    public function saveSurvey(Request $request): Response
     {
-        header("Content-Type: text/plain");
-        $survey = new RequestSurveyLoader;
-        $fileData = $survey->data();
-        $fileStorage = new SurveyFileStorage;
-        $file = $fileStorage->saveFile($fileData);
-        $content = SurveyPrinter::printInfo($fileData);
-        return $this->render('Response.html.twig', [
-            'email' => $content[0],
-            'first_name' => $content[1],
-            'last_name' => $content[2],
-            'age' => $content[3],
-        ]);
+        $surveyLoader = new RequestSurveyLoader();
+        $survey = $surveyLoader->data($request);
+
+        $fileStorage = new SurveyFileStorage();
+        $fileStorage->saveSurvey($survey);
+
+        $email = $survey->getEmail();
+        if ($email)
+        {
+            return $this->render('surveySave.html.twig');
+        }
+        else
+        {
+            return $this->render('surveySaveError.html.twig');
+        }
+    }
+
+    public function getSurvey(Request $request): Response
+    {
+        $email = $request->get('email');
+        if ($email === null)
+        {
+            $email = '';
+        }
+        $fileStorage = new SurveyFileStorage();
+        $survey = $fileStorage->getSurvey($email);
+
+        $content = SurveyPrinter::getInfo($survey);
+        return $this->render('survey.html.twig', $content);
     }
 }

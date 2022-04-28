@@ -4,41 +4,50 @@ namespace App\Classes;
 
 class SurveyFileStorage
 {
-    public function saveFile(Survey $fileData): void
+    public function getSurvey(string $email): Survey
     {
-        if ($fileData->getEmail())
+        $content[0] = 'Ошибка: файла с таким именем не существует.';
+        $content[1] = '';
+        $content[2] = '';
+        $content[3] = '';
+        if (file_exists('data/' . $email . '.txt'))
         {
-            $fileName = 'data/' . $fileData->getEmail() . '.txt';
+            $content = file('data/' . $email . '.txt');
+        }
+        return new Survey($content[0], $content[1], $content[2], $content[3]);
+    }
+
+    public function saveSurvey(Survey $survey): void
+    {
+        if ($survey->getEmail())
+        {
+            $fileName = 'data/' . $survey->getEmail() . '.txt';
             if (file_exists($fileName))
             {
                 $content = file($fileName);
-                if ($fileData->getFirstName())
+                if ($survey->getFirstName())
                 {
-                    $content[1] = 'First name: ' . $fileData->getFirstName() . PHP_EOL;
+                    $content[1] = 'First name: ' . $survey->getFirstName() . PHP_EOL;
                 }
-                if ($fileData->getLastName())
+                if ($survey->getLastName())
                 {
-                    $content[2] = 'Last name: ' . $fileData->getLastName() . PHP_EOL;        
+                    $content[2] = 'Last name: ' . $survey->getLastName() . PHP_EOL;
                 }
-                if ($fileData->getAge())
+                if ($survey->getAge())
                 {    
-                    $content[3] = 'Age: ' . $fileData->getAge();
+                    $content[3] = 'Age: ' . $survey->getAge();
                 }
                 file_put_contents($fileName, join($content));
             }
             else
             {
                 $fileMode = fopen($fileName, 'w');
-                fwrite($fileMode, 'email: ' . $fileData->getEmail() . PHP_EOL);
-                fwrite($fileMode, 'First name: ' . $fileData->getFirstName() . PHP_EOL);
-                fwrite($fileMode, 'Last name: ' . $fileData->getLastName() . PHP_EOL);
-                fwrite($fileMode, 'Age: ' . $fileData->getAge() . PHP_EOL);
+                fwrite($fileMode, 'Email: ' . $survey->getEmail() . PHP_EOL);
+                fwrite($fileMode, 'First name: ' . $survey->getFirstName() . PHP_EOL);
+                fwrite($fileMode, 'Last name: ' . $survey->getLastName() . PHP_EOL);
+                fwrite($fileMode, 'Age: ' . $survey->getAge() . PHP_EOL);
                 fclose($fileMode);
             }
-        }
-        else
-        {
-            echo('Не введен email');
         }
     } 
 }

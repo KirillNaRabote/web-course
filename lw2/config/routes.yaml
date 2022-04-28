@@ -1,3 +1,7 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+save_survey:
+  path: /survey_save
+  controller: App\Controller\SurveyController::saveSurvey
+
+get_survey:
+  path: /survey_print
+  controller: App\Controller\SurveyController::getSurvey

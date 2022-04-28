@@ -2,16 +2,16 @@
 
 namespace App\Classes;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 
-class RequestSurveyLoader extends AbstractController
+class RequestSurveyLoader
 {
-    function data(): Survey
+    public function data(Request $request): Survey
     {
-        $email = $_GET["email"] ?? "";
-        $firstName = $_GET["first_name"] ?? "";
-        $lastName = $_GET["last_name"] ?? "";
-        $age = $_GET["age"] ?? ""; 
-        return new Survey($email, $firstName, $lastName, $age);  
+        $email = $request->get("email") ?? '';
+        $firstName = $request->get("first_name") ?? '';
+        $lastName = $request->get("last_name") ?? '';
+        $age = $request->get("age") ?? '';
+        return new Survey($email, $firstName, $lastName, $age);
     }   
 }

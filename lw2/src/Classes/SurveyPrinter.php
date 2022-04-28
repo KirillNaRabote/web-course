@@ -4,13 +4,13 @@ namespace App\Classes;
 
 class SurveyPrinter
 {
-    static public function printInfo(Survey $fileData): array
+    public static function getInfo(Survey $survey): array
     {
-        $content = '';
-        if (file_exists('data/' . $fileData->getEmail() . '.txt'))
-        {
-            $content = file('data/' . $fileData->getEmail() . '.txt');
-        }
-        return $content;
+        return [
+            'email' => $survey->getEmail(),
+            'first_name' => $survey->getFirstName(),
+            'last_name' => $survey->getLastName(),
+            'age' => $survey->getAge(),
+        ];
     }
 }

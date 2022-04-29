@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7fff975-cb51-4d66-88aa-64379e35345c" name="Changes" comment="" />
+    <list default="true" id="b7fff975-cb51-4d66-88aa-64379e35345c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/RequestSurveyLoader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Survey.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/SurveyFileStorage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/SurveyPrinter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SurveyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SurveyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/surveySave.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/surveySave.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,17 +160,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "F:/study/web-course/lw2",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Confirmation",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/study/web-course/lw2&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Confirmation&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\study\web-course\lw2\src" />
@@ -186,6 +195,9 @@
       <workItem from="1651165038079" duration="6255000" />
       <workItem from="1651174770125" duration="63000" />
       <workItem from="1651177071057" duration="1881000" />
+      <workItem from="1651221286613" duration="1446000" />
+      <workItem from="1651226181842" duration="1630000" />
+      <workItem from="1651228080411" duration="391000" />
     </task>
     <servers />
   </component>

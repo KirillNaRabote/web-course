@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Classes;
+namespace App\Module\Survey;
 
 use Symfony\Component\HttpFoundation\Request;
 

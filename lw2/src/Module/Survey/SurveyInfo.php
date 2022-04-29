@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Classes;
+namespace App\Module\Survey;
 
-class SurveyPrinter
+class SurveyInfo
 {
     public static function getInfo(Survey $survey): array
     {

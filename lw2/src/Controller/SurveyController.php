@@ -4,9 +4,9 @@ namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use App\Classes\SurveyPrinter;
-use App\Classes\RequestSurveyLoader;
-use App\Classes\SurveyFileStorage;
+use App\Module\Survey\SurveyInfo;
+use App\Module\Survey\RequestSurveyLoader;
+use App\Module\Survey\SurveyFileStorage;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class SurveyController extends AbstractController
@@ -37,10 +37,11 @@ class SurveyController extends AbstractController
         {
             $email = '';
         }
+
         $fileStorage = new SurveyFileStorage();
         $survey = $fileStorage->getSurvey($email);
 
-        $content = SurveyPrinter::getInfo($survey);
+        $content = SurveyInfo::getInfo($survey);
         return $this->render('survey.html.twig', $content);
     }
 }
